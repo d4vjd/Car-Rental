@@ -58,10 +58,6 @@ class RentalAgenda {
         }
     }
 
-    public void assign(RentalAgenda otherAgenda) {
-        this.rentals = new ArrayList<>(otherAgenda.rentals);
-    }
-
     public void deleteRentalFromRentalAgenda(int id) {
         for (int i = 0; i < rentals.size(); i++) {
             if (rentals.get(i).getRentalId() == id) {
@@ -72,4 +68,57 @@ class RentalAgenda {
         }
         System.out.println("Rental with ID " + id + " was not found in the RentalAgenda.");
     }
+
+    public int getRentalsPerMonth(int month) {
+        int count = 0;
+        for (Rental rental : rentals) {
+            if (rental.getStartDate().getMonthValue() == month) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public Car getMostRentedCar() {
+        int[] carCount = new int[rentals.size()];
+        int maxIndex = 0;
+        for (int i = 0; i < rentals.size(); i++) {
+            for (int j = i+1; j < rentals.size(); j++) {
+                if (rentals.get(i).getRentedCar().getId() == rentals.get(j).getRentedCar().getId()) {
+                    carCount[i]++;
+                    if (carCount[i] > carCount[maxIndex]) {
+                        maxIndex = i;
+                    }
+                }
+            }
+        }
+        return rentals.get(maxIndex).getRentedCar();
+    }
+
+    public void getRentalFeeStatistics() {
+        int totalRentalFee = 0;
+        int totalDuration = 0;
+        int rentalCount = 0;
+
+        for (Rental rental : rentals) {
+            totalRentalFee += rental.getRentalFee();
+            totalDuration += rental.getEndDate().getDayOfYear() - rental.getStartDate().getDayOfYear();
+            rentalCount++;
+        }
+
+        int avgRentalFee = 0;
+        if (rentalCount > 0) {
+            avgRentalFee = totalRentalFee / rentalCount;
+        }
+
+        int avgDuration = 0;
+        if (rentalCount > 0) {
+            avgDuration = totalDuration / rentalCount;
+        }
+
+        System.out.println("Total Rental Fees: " + totalRentalFee);
+        System.out.println("Average Rental Fee per Rental: " + avgRentalFee);
+        System.out.println("Average Rental Duration per Rental: " + avgDuration + " days");
+    }
+
 }

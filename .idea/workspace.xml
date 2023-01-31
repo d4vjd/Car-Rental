@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a3d37fc5-34eb-4b77-9a8f-1e8e33eacab0" name="Changes" comment="The first time this method is called, a new instance of the RentalAgenda class is created and stored in the instance variable. Subsequent calls to the getInstance() method will return the same instance stored in the instance variable, ensuring that there is only one instance of the RentalAgenda class in the entire program.">
+    <list default="true" id="a3d37fc5-34eb-4b77-9a8f-1e8e33eacab0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClientBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientBook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Garage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Garage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rental.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rental.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RentalAgenda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RentalAgenda.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +59,7 @@
       <option name="presentableId" value="Default" />
       <updated>1675090854590</updated>
       <workItem from="1675090855784" duration="7612000" />
-      <workItem from="1675180418606" duration="3140000" />
+      <workItem from="1675180418606" duration="6199000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1675098185296</created>
@@ -74,7 +68,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675098185296</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Implemented delete methods for every object and changed RentalAgenda to a singleton so that only one instance of a RentalAgenda can be created at once.">
+      <created>1675183752538</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1675183752539</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -82,6 +83,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Implemented delete methods for every object and changed RentalAgenda to a singleton so that only one instance of a RentalAgenda can be created at once." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented delete methods for every object and changed RentalAgenda to a singleton so that only one instance of a RentalAgenda can be created at once." />
   </component>
 </project>
