@@ -1,14 +1,26 @@
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
 class RentalAgenda {
+    private static RentalAgenda instance = null;
     private List<Rental> rentals;
 
-    public RentalAgenda() {
+    private RentalAgenda() {
         this.rentals = new ArrayList<>();
+    }
+
+    public static RentalAgenda getInstance() {
+        if (instance == null) {
+            instance = new RentalAgenda();
+        }
+        return instance;
+        //The first time this method is called, a new instance of the RentalAgenda
+        //class is created and stored in the instance variable. Subsequent calls to
+        //the getInstance() method will return the same instance stored in the instance
+        //variable, ensuring that there is only one instance of the RentalAgenda class in
+        //the entire program.
     }
 
     public void addRental(Rental rental) {
@@ -50,4 +62,14 @@ class RentalAgenda {
         this.rentals = new ArrayList<>(otherAgenda.rentals);
     }
 
+    public void deleteRentalFromRentalAgenda(int id) {
+        for (int i = 0; i < rentals.size(); i++) {
+            if (rentals.get(i).getRentalId() == id) {
+                rentals.remove(i);
+                System.out.println("Rental with ID " + id + " has been removed from the RentalAgenda.");
+                return;
+            }
+        }
+        System.out.println("Rental with ID " + id + " was not found in the RentalAgenda.");
+    }
 }

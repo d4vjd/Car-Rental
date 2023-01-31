@@ -61,4 +61,16 @@ public class Garage {
         this.location = garage.location;
         this.cars = new ArrayList<>(garage.cars);
     }
+
+    public void deleteCarFromGarage(int carId) {
+        for (int i = 0; i < cars.size(); i++) {
+            Car car = cars.get(i);
+            if (car.getId() == carId) {
+                cars.remove(i);
+                System.out.println("Car with ID " + carId + " has been removed from the garage.");
+                return;
+            }
+        }
+        System.out.println("Car with ID " + carId + " was not found in the garage.");
+    }
 }

@@ -23,7 +23,7 @@ public class Main {
         //client2.addClientFromInput(clientBook1); //add client2 to clientBook1 with keyboard input
         clientBook1.displayClients();
 
-        RentalAgenda rentalAgenda1 = new RentalAgenda();
+        RentalAgenda rentalAgenda1 = RentalAgenda.getInstance();
         rentalAgenda1.addRental(rental1);
         rentalAgenda1.displayRentals();
     }

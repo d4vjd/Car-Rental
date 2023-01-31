@@ -69,4 +69,9 @@ class Client {
         this.phoneNumber = otherClient.phoneNumber;
     }
 
+    public void deleteClient(Client client) {
+        client = null;
+    }
+
+
 }

@@ -43,4 +43,16 @@ public class ClientBook {
         this.id = clientBook.id;
         this.clients = new ArrayList<>(clientBook.clients);
     }
+
+    public void deleteClientFromClientBook(int id) {
+        for (int i = 0; i < clients.size(); i++) {
+            if (clients.get(i).getId() == id) {
+                clients.remove(i);
+                System.out.println("Client with ID " + id + " has been removed from the ClientBook.");
+                return;
+            }
+        }
+        System.out.println("Client with ID " + id + " was not found in the ClientBook.");
+    }
+
 }

@@ -81,4 +81,9 @@ public class Car {
         this.color = car2.color;
         this.year = car2.year;
     }
+
+    public void deleteCar(Car car) {
+        car = null;
+    }
+
 }

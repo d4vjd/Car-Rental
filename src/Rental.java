@@ -83,4 +83,9 @@ class Rental {
         this.endDate = otherRental.endDate;
     }
 
+    public void deleteRental(Rental rental) {
+        rental = null;
+    }
+
+
 }
